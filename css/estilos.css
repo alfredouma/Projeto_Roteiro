@@ -1,0 +1,42 @@
+.logo{
+	width: 200px;
+}
+
+ul{
+	font-family: 'Lato', sans-serif;
+}
+
+.fonttile{
+	font-family: 'Lato', sans-serif;
+}
+.ptamanho{
+	font-size: 20px;
+}
+.htamanho{
+	font-size: 50px;
+}
+
+
+.ptamanho2{
+	font-size: 15px;
+}
+.madeira{
+	margin-top: 200px;
+}
+
+.ptamaho3{
+	font-size: 20px;
+}
+
+.palace{
+	margin-top: 200px;
+}
+
+.hotel{
+	margin-top: 200px;
+}
+.bg-body-tertiaryy {
+  
+       --tw-bg-opacity: 1;
+    background-color: rgb(237 237 238/var(--tw-bg-opacity));
+}
