@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Madeira Atividades</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 12px 0;
+    }
+
+    .navbar-brand img {
+      max-height: 90px;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      color: #333 !important;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #0077b6 !important;
+    }
+
+    .dropdown-menu {
+      border: none;
+      border-radius: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .dropdown-item {
+      padding: 10px 20px;
+      font-weight: 400;
+      color: #333;
+      transition: background 0.3s ease;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f0f0f0;
+      color: #0077b6;
+    }
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .weather {
+      font-size: 0.95rem;
+      color: #f59e0b;
+      font-weight: 500;
+    }
+
+    .lang-select {
+      font-size: 0.9rem;
+    }
+
+    /* Secção com imagem de fundo */
+    .section-image {
+      background-image: url('/assets/img/header.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+    }
+
+    .section-image::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .section-image .content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .section-image h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .section-image p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    /* Conteúdo central */
+    main {
+      flex-grow: 1;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    main h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #0077b6;
+    }
+
+    main p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    /* FOOTER GERAL */
+    .footer {
+      background: #f8f9fa;
+      padding: 40px 20px;
+      border-top: 1px solid #e5e5e5;
+      font-family: 'Segoe UI', sans-serif;
+      color: #444;
+    }
+
+    .footer-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-left {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .footer-logo {
+      max-height: 130px; 
+      width: auto;
+    }
+
+    .footer-right {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #444;
+      font-size: 0.95rem;
+      transition: 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: #0077b6;
+    }
+
+    .footer-copy {
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-left {
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .footer-right {
+        align-items: center;
+      }
+
+      .footer-logo {
+        max-height: 80px; 
+      }
+
+      .section-image h2 {
+        font-size: 2rem;
+      }
+
+      .section-image p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+
+    <a class="navbar-brand" href="/pages/index.html">
+      <img src="/assets/img/logo.png.png" alt="Madeira Atividades">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+        <!-- GERAL -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">GERAL</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/pages/geral/privacidade.html">Privacidade</a></li>
+            <li><a class="dropdown-item" href="/pages/geral/preferencias.html">Preferências</a></li>
+            <li><a class="dropdown-item" href="/pages/geral/ajuda.html">Ajuda</a></li>
+            <li><a class="dropdown-item" href="/pages/geral/dados-pessoais.html">Dados Pessoais</a></li>
+          </ul>
+        </li>
+
+        <!-- ONDE IR -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">ONDE IR</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/pages/lugares/costa-norte.html">Costa Norte</a></li>
+            <li><a class="dropdown-item" href="/pages/lugares/costa-sul.html">Costa Sul</a></li>
+            <li><a class="dropdown-item" href="/pages/lugares/porto-santo.html">Porto Santo</a></li>
+          </ul>
+        </li>
+
+        <!-- O QUE FAZER -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">O QUE FAZER</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/pages/inspiracao/natureza.html">Natureza</a></li>
+            <li><a class="dropdown-item" href="/pages/inspiracao/desporto.html">Desporto</a></li>
+            <li><a class="dropdown-item" href="/pages/inspiracao/cultura.html">Cultura</a></li>
+            <li><a class="dropdown-item" href="/pages/inspiracao/gastronomia.html">Gastronomia</a></li>
+            <li><a class="dropdown-item" href="/pages/inspiracao/levadas.html">Levadas</a></li>
+            <li><a class="dropdown-item" href="/pages/inspiracao/tendencias.html">Tendências</a></li>
+            <li><a class="dropdown-item" href="/pages/inspiracao/festas.html">Arraiais</a></li>
+          </ul>
+        </li>
+
+        <!-- NOTIFICAÇÕES -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">NOTIFICAÇÕES</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/pages/notificacoes/atividades.html">Atividades</a></li>
+            <li><a class="dropdown-item" href="/pages/notificacoes/pagamentos.html">Pagamentos</a></li>
+            <li><a class="dropdown-item" href="/pages/notificacoes/updates.html">Updates</a></li>
+          </ul>
+        </li>
+
+        <!-- CARRINHO -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">CARRINHO</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/pages/carrinho/lista.html">Lista de Artigos</a></li>
+            <li><a class="dropdown-item" href="/pages/carrinho/finalizar.html">Finalizar Roteiro</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- ÍCONES -->
+      <div class="nav-icons ms-auto">
+        <span class="weather">☀️ 19°C</span>
+
+        <select class="form-select form-select-sm lang-select">
+          <option value="pt" selected>PT</option>
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+        </select>
+        <button class="btn btn-outline-secondary btn-sm">🔍</button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+
+   <!-- SECÇÃO COM IMAGEM DE FUNDO -->
+  <section class="section-image">
+    <div class="content">
+      <h2>Explora. Respeita. Conserva.</h2>
+      <p>
+        Explore experiências únicas, respeite a vida e os espaços que visita  
+        e preserve a essência da Madeira para todos.
+      </p>
+    </div>
+  </section>
+
+
+
+
+ <!-- CONTEÚDO -->
+<main class="container py-5 conteudo-home">
+
+ <section class="container my-5">
+  <h2 class="text-center mb-4">O que fazer na Madeira?</h2>
+  <p class="text-center mb-5">
+    Explore tudo o que este arquipélago tem para oferecer. Paisagens naturais impressionantes, águas cristalinas, tradições centenárias, sabores autênticos e uma hospitalidade calorosa. O que lhe apetece fazer primeiro?
+  </p>
+
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="card border-0">
+        <img src="/assets/img/floresta.jpg" class="card-img-top" alt="Passeio de jipe na natureza">
+        <div class="card-body px-0">
+          <h5 class="fw-bold text-uppercase">Atividades na Natureza</h5>
+          <p class="mb-0">Passeios pela natureza da Madeira</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card border-0">
+        <img src="/assets/img/cultura.jpg" class="card-img-top" alt="Mergulho no mar da Madeira">
+        <div class="card-body px-0">
+          <h5 class="fw-bold text-uppercase">Atividades Culturais</h5>
+          <p class="mb-0">Espetáculos culturais inesquecíveis</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4 mt-4">
+    <div class="col-md-6">
+      <div class="card border-0">
+        <img src="/assets/img/desporto.jpg" class="card-img-top" alt="Parapente sobre a costa">
+        <div class="card-body px-0">
+          <h5 class="fw-bold text-uppercase">Atividades Desportivas</h5>
+          <p class="mb-0">Passeios desportivos e aventuras na natureza</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card border-0">
+        <img src="/assets/img/gastronomia.jpg" class="card-img-top" alt="Vista da cidade do Funchal">
+        <div class="card-body px-0">
+          <h5 class="fw-bold text-uppercase">Conheça a Gastronomia</h5>
+          <p class="mb-0">Experimente a incrível gastronomia Madeirense</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4 mt-5">
+    <div class="col-md-12">
+      <div class="card border-0">
+<img src="/assets/img/lhaa.png" class="card-img-top" alt="Natal e Ano Novo na Madeira" style="height: 280px; object-fit: cover;">
+        <div class="card-body px-0">
+          <h4 class="fw-bold">O que visitar na Madeira?</h4>
+          <p>
+            Madeira e Porto Santo irão surpreendê-lo com paisagens fascinantes e um rico patrimônio cultural e histórico em todos os lugares que você visitar. De norte a sul e de leste a oeste, descubra tudo o que pode explorar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <div class="row g-4 mt-5">
+  <div class="col-md-4">
+    <div class="card border-0 h-100 d-flex flex-column">
+      <img src="/assets/img/porto.jpg" class="card-img-top" alt="Porto Santo" style="height: 220px; object-fit: cover;">
+      <div class="card-body px-0 d-flex flex-column flex-grow-1">
+        <h5 class="fw-bold">Onde ir - Porto Santo</h5>
+        <p>Um verdadeiro oásis dourado suspenso no oceano Atlântico.</p>
+        <div class="mt-auto">
+          <a href="#" class="btn btn-outline-primary text-uppercase">Ler mais</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card border-0 h-100 d-flex flex-column">
+      <img src="/assets/img/norte.jpg" class="card-img-top" alt="Costa Norte" style="height: 220px; object-fit: cover;">
+      <div class="card-body px-0 d-flex flex-column flex-grow-1">
+        <h5 class="fw-bold">Onde ir - Costa Norte</h5>
+        <p>A costa norte da Madeira é a orgulhosa guardiã de grande parte da floresta de louro, Patrimônio Mundial da UNESCO.</p>
+        <div class="mt-auto">
+          <a href="#" class="btn btn-outline-primary text-uppercase">Ler mais</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card border-0 h-100 d-flex flex-column">
+      <img src="/assets/img/sul.jpg" class="card-img-top" alt="Costa Sul" style="height: 220px; object-fit: cover;">
+      <div class="card-body px-0 d-flex flex-column flex-grow-1">
+        <h5 class="fw-bold">Onde ir - Costa Sul</h5>
+        <p>Paisagens naturais ou cosmopolitas, mares tranquilos e quentes, vilarejos históricos, tradições e muitos sabores: descubra os encantos da costa sul!</p>
+        <div class="mt-auto">
+          <a href="#" class="btn btn-outline-primary text-uppercase">Ler mais</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+
+
+
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-left">
+        <img src="/assets/img/logoo.png" alt="Madeira Atividades" class="footer-logo">
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="#">Termos & Condições</a>
+          <a href="#">Política de Privacidade</a>
+          <a href="#">Cookies</a>
+          <a href="#">Contactos</a>
+          <a href="#">Sobre Nós</a>
+        </div>
+
+        <div class="footer-copy">
+          © 2025 Madeira Atividades — Todos os direitos reservados.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- SCRIPT NECESSÁRIO PARA DROPDOWNS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
