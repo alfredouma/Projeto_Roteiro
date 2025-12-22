@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Madeira Atividades</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 12px 0;
+    }
+
+    .navbar-brand img {
+      max-height: 90px;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      color: #333 !important;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #0077b6 !important;
+    }
+
+    .dropdown-menu {
+      border: none;
+      border-radius: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .dropdown-item {
+      padding: 10px 20px;
+      font-weight: 400;
+      color: #333;
+      transition: background 0.3s ease;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f0f0f0;
+      color: #0077b6;
+    }
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .weather {
+      font-size: 0.95rem;
+      color: #f59e0b;
+      font-weight: 500;
+    }
+
+    .lang-select {
+      font-size: 0.9rem;
+    }
+
+    /* Secção com imagem de fundo */
+    .section-image {
+      background-image: url('/assets/img/header.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+    }
+
+    .section-image::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .section-image .content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .section-image h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .section-image p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    /* Conteúdo central */
+    main {
+      flex-grow: 1;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    main h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #0077b6;
+    }
+
+    main p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    /* FOOTER GERAL */
+    .footer {
+      background: #f8f9fa;
+      padding: 40px 20px;
+      border-top: 1px solid #e5e5e5;
+      font-family: 'Segoe UI', sans-serif;
+      color: #444;
+    }
+
+    .footer-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-left {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .footer-logo {
+      max-height: 130px; 
+      width: auto;
+    }
+
+    .footer-right {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #444;
+      font-size: 0.95rem;
+      transition: 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: #0077b6;
+    }
+
+    .footer-copy {
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-left {
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .footer-right {
+        align-items: center;
+      }
+
+      .footer-logo {
+        max-height: 80px; 
+      }
+
+      .section-image h2 {
+        font-size: 2rem;
+      }
+
+      .section-image p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+
+    <a class="navbar-brand" href="/pages/index.html">
+      <img src="/assets/img/logo.png.png" alt="Madeira Atividades">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+        <!-- GERAL -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">GERAL</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/pages/geral/privacidade.html">Privacidade</a></li>
+            <li><a class="dropdown-item" href="/pages/geral/preferencias.html">Preferências</a></li>
+            <li><a class="dropdown-item" href="/pages/geral/ajuda.html">Ajuda</a></li>
+            <li><a class="dropdown-item" href="/pages/geral/dados-pessoais.html">Dados Pessoais</a></li>
+          </ul>
+        </li>
+
+        <!-- ONDE IR -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">ONDE IR</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/pages/lugares/costa-norte.html">Costa Norte</a></li>
+            <li><a class="dropdown-item" href="/pages/lugares/costa-sul.html">Costa Sul</a></li>
+            <li><a class="dropdown-item" href="/pages/lugares/porto-santo.html">Porto Santo</a></li>
+          </ul>
+        </li>
+
+        <!-- O QUE FAZER -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">ATIVIDADES</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/pages/inspiracao/natureza.html">Natureza</a></li>
+            <li><a class="dropdown-item" href="/pages/inspiracao/desporto.html">Desporto</a></li>
+            <li><a class="dropdown-item" href="/pages/inspiracao/cultura.html">Cultura</a></li>
+            <li><a class="dropdown-item" href="/pages/inspiracao/gastronomia.html">Gastronomia</a></li>
+            <li><a class="dropdown-item" href="/pages/inspiracao/levadas.html">Levadas</a></li>
+            <li><a class="dropdown-item" href="/pages/inspiracao/tendencias.html">Tendências</a></li>
+            <li><a class="dropdown-item" href="/pages/inspiracao/festas.html">Arraiais</a></li>
+          </ul>
+        </li>
+
+        <!-- NOTIFICAÇÕES -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">NOTIFICAÇÕES</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/pages/notificacoes/atividades.html">Atividades</a></li>
+            <li><a class="dropdown-item" href="/pages/notificacoes/pagamentos.html">Pagamentos</a></li>
+            <li><a class="dropdown-item" href="/pages/notificacoes/updates.html">Updates</a></li>
+          </ul>
+        </li>
+
+        <!-- CARRINHO -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">CARRINHO</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/pages/carrinho/lista.html">Lista de Artigos</a></li>
+            <li><a class="dropdown-item" href="/pages/carrinho/finalizar.html">Finalizar Roteiro</a></li>
+          </ul>
+          <li><a class="dropdown-item" href="/pages/favorito.html">SEUS FAVORITOS</a></li>
+        </li>
+
+         
+      </ul>
+
+      
+
+      <!-- ÍCONES -->
+      <div class="nav-icons ms-auto">
+        <span class="weather">☀️ 19°C</span>
+
+        <select class="form-select form-select-sm lang-select">
+          <option value="pt" selected>PT</option>
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+        </select>
+        <a href="/pages/login.html">
+        <button class="btn btn-outline-secondary btn-sm">👤</button>
+       </a>
+
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+
+
+ <!-- CONTEÚDO -->
+<main class="container py-5 conteudo-home">
+
+ <section class="container my-5">
+  
+<h1 class="mb-4 fw-bold" style="color:#0077b6;">Notificações de Atividades</h1>
+
+<p class="lead mb-5" style="max-width:750px; margin:auto;">
+  Aqui encontra todas as atualizações sobre atividades recomendadas, eventos, promoções e agora também 
+  <strong>alertas das datas das atividades que comprou</strong>.  
+  Mantenha-se informado e aproveite cada experiência na Madeira.
+</p>
+
+<!-- ALERTAS DE DATAS DAS ATIVIDADES COMPRADAS -->
+<h2 class="fw-bold mb-4">As Suas Atividades Agendadas</h2>
+
+<div class="row g-4 mb-5">
+
+  <div class="col-md-6">
+    <div class="p-4 rounded shadow-sm h-100" style="background:#ffffff;">
+      <div class="d-flex align-items-center mb-3">
+        <img src="/assets/img/levada.jpg" style="width:90px; height:70px; object-fit:cover; border-radius:6px; margin-right:15px;">
+        <div>
+          <h5 class="fw-semibold mb-1">Levada do Caldeirão Verde</h5>
+          <small class="text-muted">Atividade comprada</small>
+        </div>
+      </div>
+      <p class="text-muted mb-2">Data da atividade: <strong>14 de Março, 2025</strong></p>
+      <span class="badge bg-warning text-dark mb-3">Faltam 3 dias</span>
+      <button class="btn btn-outline-primary btn-sm">Ver detalhes</button>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="p-4 rounded shadow-sm h-100" style="background:#ffffff;">
+      <div class="d-flex align-items-center mb-3">
+        <img src="/assets/img/barco.jpg" style="width:90px; height:70px; object-fit:cover; border-radius:6px; margin-right:15px;">
+        <div>
+          <h5 class="fw-semibold mb-1">Passeio de Barco ao Pôr do Sol</h5>
+          <small class="text-muted">Atividade comprada</small>
+        </div>
+      </div>
+      <p class="text-muted mb-2">Data da atividade: <strong>22 de Março, 2025</strong></p>
+      <span class="badge bg-success mb-3">Confirmada</span>
+      <button class="btn btn-outline-primary btn-sm">Ver detalhes</button>
+    </div>
+  </div>
+
+</div>
+
+<hr class="my-5">
+
+<!-- DESTAQUES COM IMAGENS -->
+<h2 class="fw-bold mb-4">Sugestões e Destaques</h2>
+
+<div class="row g-4 mb-5">
+
+  <div class="col-md-4">
+    <div class="card shadow-sm border-0 h-100">
+      <img src="/assets/img/alecrim.jpg" class="card-img-top" style="height:180px; object-fit:cover;">
+      <div class="card-body">
+        <h5 class="fw-semibold">Nova atividade recomendada</h5>
+        <p class="text-muted">Trilho da Levada do Alecrim — ideal para amantes de natureza.</p>
+        <span class="badge bg-primary">Recomendado</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card shadow-sm border-0 h-100">
+      <img src="/assets/img/mergulho.jpg" class="card-img-top" style="height:180px; object-fit:cover;">
+      <div class="card-body">
+        <h5 class="fw-semibold">Atividade em destaque</h5>
+        <p class="text-muted">Sessão de mergulho na costa sul — vagas limitadas.</p>
+        <span class="badge bg-warning text-dark">Popular</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card shadow-sm border-0 h-100">
+      <img src="/assets/img/santana.jpg" class="card-img-top" style="height:180px; object-fit:cover;">
+      <div class="card-body">
+        <h5 class="fw-semibold">Novo evento disponível</h5>
+        <p class="text-muted">Arraial tradicional em Santana — música, comida e cultura.</p>
+        <span class="badge bg-success">Novo</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<hr class="my-5">
+
+<!-- TIMELINE DE NOTIFICAÇÕES -->
+<h2 class="fw-bold mb-4">Histórico de Notificações</h2>
+
+<div class="text-start mx-auto" style="max-width:750px;">
+
+  <div class="p-4 mb-4 rounded shadow-sm" style="background:#ffffff;">
+    <h5 class="fw-semibold mb-1">Atualização de atividade</h5>
+    <p class="text-muted mb-2">A Levada dos Cedros tem novas informações sobre o percurso.</p>
+    <small class="text-secondary">Há 2 horas</small>
+  </div>
+
+  <div class="p-4 mb-4 rounded shadow-sm" style="background:#ffffff;">
+    <h5 class="fw-semibold mb-1">Sugestão personalizada</h5>
+    <p class="text-muted mb-2">Com base nas suas preferências, recomendamos o Miradouro do Guindaste.</p>
+    <small class="text-secondary">Ontem</small>
+  </div>
+
+  <div class="p-4 mb-4 rounded shadow-sm" style="background:#ffffff;">
+    <h5 class="fw-semibold mb-1">Nova atividade adicionada</h5>
+    <p class="text-muted mb-2">Passeio de barco ao pôr do sol disponível para reserva.</p>
+    <small class="text-secondary">Há 3 dias</small>
+  </div>
+
+  <div class="p-4 mb-4 rounded shadow-sm" style="background:#ffffff;">
+    <h5 class="fw-semibold mb-1">Promoção especial</h5>
+    <p class="text-muted mb-2">Desconto de 20% em atividades de canyoning esta semana.</p>
+    <small class="text-secondary">Há 1 semana</small>
+  </div>
+
+</div>
+
+<hr class="my-5">
+
+<!-- BOTÃO FINAL -->
+<div class="text-center mt-4">
+  <button class="btn btn-primary px-5 py-2" style="font-weight:600; text-transform:uppercase;">
+    Limpar Notificações
+  </button>
+</div>
+
+
+
+
+
+    
+</section>
+</main>
+
+
+
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-left">
+        <img src="/assets/img/logoo.png" alt="Madeira Atividades" class="footer-logo">
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="/pages/geral/privacidade.html">Termos & Condições</a>
+          <a href="/pages/geral/privacidade.html">Política de Privacidade</a>
+          <a href="/pages/geral/privacidade.html">Cookies</a>
+          <a href="/pages/geral/privacidade.html">Contactos</a>
+          <a href="/pages/geral/privacidade.html">Sobre Nós</a>
+        </div>
+
+        <div class="footer-copy">
+          © 2025 Madeira Atividades — Todos os direitos reservados.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- SCRIPT NECESSÁRIO PARA DROPDOWNS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
