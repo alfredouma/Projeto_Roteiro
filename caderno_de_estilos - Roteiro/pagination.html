@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt‑PT">
 <head>
@@ -76,4 +77,84 @@
   </nav>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="pt‑PT">
+<head>
+  <meta charset="UTF‑8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paginação Estilizada</title>
+  <link href="base.css" rel="stylesheet">
+  <style>
+
+    nav.pagination-nav {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .pagination {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .page-item {
+      margin: 0 4px;
+    }
+
+    .page-link {
+      display: block;
+      padding: 8px 12px;
+      text-decoration: none;
+      border: 1px solid var(--cor-cinzento);
+      color: var(--cor-terciaria);
+      background-color: var(--cor-secundaria);
+      border-radius: 4px;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .page-link:hover {
+      background-color: var(--cor-primaria);
+      color: var(--cor-secundaria);
+    }
+
+    .page-item.active .page-link {
+      background-color: var(--cor-terciaria);
+      color: var(--cor-secundaria);
+      border-color: var(--cor-terciaria);
+    }
+
+    .page-item .page-link[aria-label="Previous"],
+    .page-item .page-link[aria-label="Next"] {
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav aria-label="Page navigation example" class="pagination-nav">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active" aria-current="page">
+        <a class="page-link" href="#">2</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+</body>
+>>>>>>> c486fefbddff1057808eae07fe5b769680fe0aae
 </html>
