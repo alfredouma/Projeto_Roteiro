@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabela Exemplo</title>
+  <link href="base.css" rel="stylesheet">
+  <style>
+
+    body {
+      font-family: var(--font-base);
+      background-color: var(--cor-fundo);
+      padding: 40px;
+      color: var(--cor-texto);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: var(--cor-secundaria);
+      color: var(--cor-terciaria);
+    }
+
+    thead {
+      background-color: var(--cor-primaria);
+      color: var(--cor-secundaria);
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    .table-group-divider tr:not(:first-child) {
+      border-top: 2px solid var(--cor-cinzento);
+    }
+  </style>
+</head>
+<body>
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

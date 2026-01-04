@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Cartões de Cores</title>
+  <link href="base.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: var(--font-base);
+      background-color: var(--cor-fundo);
+      padding: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card-demo {
+      background: var(--cor-branco, #ffffff);
+      border: 0;
+      border-radius: .5rem;
+      box-shadow: 0 .125rem .25rem rgba(0,0,0,.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .card-demo .card-img-top {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-demo .card-body {
+      padding: .75rem;
+      flex: 1 1 auto;
+    }
+
+    .card-demo h5 {
+      margin: 0 0 .5rem;
+      font-size: 1rem;
+      color: var(--cor-primaria);
+    }
+
+    .card-demo .subtitle {
+      font-size: .9rem;
+      color: var(--cor-secundaria);
+      margin-bottom: .5rem;
+      opacity: .95;
+    }
+
+    .card-demo .muted {
+      font-size: .9rem;
+      color: var(--cor-cinzento);
+      opacity: .85;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="card-demo">
+      <img src="/assets/img/floresta.jpg" class="card-img-top" alt="Passeio de jipe">
+      <div class="card-body">
+        <h5>Passeio de Jipe</h5>
+        <div class="subtitle">Natureza</div>
+        <p class="muted">caderno de estilos</p>
+      </div>
+    </div>
+
+    <div class="card-demo">
+      <img src="/assets/img/cultura.jpg" class="card-img-top" alt="Cultura">
+      <div class="card-body">
+        <h5>Cultura Local</h5>
+        <div class="subtitle">Experiências</div>
+        <p class="muted">caderno de estilos</p>
+      </div>
+    </div>
+
+    <div class="card-demo">
+      <img src="/assets/img/desporto.jpg" class="card-img-top" alt="Desporto">
+      <div class="card-body">
+        <h5>Atividades ao Ar Livre</h5>
+        <div class="subtitle">Desporto</div>
+        <p class="muted">caderno de estilos</p>
+      </div>
+    </div>
+
+    <div class="card-demo">
+      <img src="/assets/img/gastronomia.jpg" class="card-img-top" alt="Gastronomia">
+      <div class="card-body">
+        <h5>Gastronomia</h5>
+        <div class="subtitle">Sabores locais</div>
+        <p class="muted">caderno de estilos</p>
+      </div>
+    </div>
+
+    <div class="card-demo">
+      <img src="/assets/img/porto.jpg" class="card-img-top" alt="Porto Santo">
+      <div class="card-body">
+        <h5>Visita a Porto Santo</h5>
+        <div class="subtitle">Praias</div>
+        <p class="muted">caderno de estilos</p>
+      </div>
+    </div>
+
+    <div class="card-demo">
+      <img src="/assets/img/norte.jpg" class="card-img-top" alt="Costa Norte">
+      <div class="card-body">
+        <h5>Costa Norte</h5>
+        <div class="subtitle">Paisagens</div>
+        <p class="muted">caderno de estilos</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

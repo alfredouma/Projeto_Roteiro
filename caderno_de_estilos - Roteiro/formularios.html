@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulário Estilizado</title>
+  <link href="base.css" rel="stylesheet">
+  <style>
+
+    body {
+      font-family: var(--font-base);
+      padding: 20px;
+      background-color: var(--cor-fundo);
+    }
+
+    form {
+      max-width: 400px;
+      background-color: var(--cor-secundaria);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    label.form-label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--cor-terciaria);
+      font-weight: bold;
+    }
+
+    input.form-control,
+    select.form-select {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 16px;
+      border: 1px solid var(--cor-cinzento);
+      border-radius: 4px;
+      font-size: 14px;
+      color: var(--cor-terciaria);
+      background-color: var(--cor-secundaria);
+      transition: border-color 0.2s;
+      box-sizing: border-box;
+    }
+
+    input.form-control:focus,
+    select.form-select:focus {
+      outline: none;
+      border-color: var(--cor-primaria);
+      box-shadow: 0 0 0 2px rgba(0, 119, 182, 0.15);
+    }
+
+    .form-check {
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    .form-check-input {
+      margin-right: 8px;
+      width: 16px;
+      height: 16px;
+      accent-color: var(--cor-primaria);
+    }
+
+    .form-check-label {
+      color: var(--cor-terciaria);
+      font-size: 14px;
+    }
+
+    button {
+      background-color: var(--cor-primaria);
+      color: var(--cor-secundaria);
+      border: none;
+      padding: 10px 16px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: var(--cor-terciaria);
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <label for="inputEmail" class="form-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail" placeholder="Escreve o teu email">
+
+    <label for="inputPassword" class="form-label">Palavra-passe</label>
+    <input type="password" class="form-control" id="inputPassword" placeholder="Escreve a tua palavra-passe">
+
+    <label for="inputAddress" class="form-label">Morada</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Rua, Nº, Complemento">
+
+    <label for="inputState" class="form-label">Morada</label>
+    <select id="inputState" class="form-select">
+      <option selected>Escolhe...</option>
+      <option>Distrito 1</option>
+      <option>Distrito 2</option>
+    </select>
+
+   
+
+    <button type="submit">Submeter</button>
+  </form>
+
+</body>
+</html>
